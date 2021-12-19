@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+</head>
+<body>
+    {%for message in messages%}
+        <strong>Message : </strong>{{message}}
+    {% endfor %}
+    <h2>Signup </h2>
+    
+    <form action="/signin" method="POST">   
+        {% csrf_token %}           
+        Username:<input type='text' name='username' required><br><br>
+        Password:<input type='Password' name='password' required><br><br>
+       <button type='submit'>SignIn</button>
+    </form>
+    
+</body>
+</html>
